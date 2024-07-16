@@ -1,13 +1,12 @@
 import express from "express";
 import dotenv from "dotenv";
-import cors from "cors";
 import passport from "passport";
 import session from "express-session";
 import path from "path";
 
 import "./passport/github.auth.js";
 
-import userRoutes from "./routes/user.route.js";
+import userRoutes from "./routes/auth.route.js";
 import exploreRoutes from "./routes/explore.route.js";
 import authRoutes from "./routes/auth.route.js";
 

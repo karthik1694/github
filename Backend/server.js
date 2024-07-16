@@ -31,9 +31,6 @@ app.use(cors());
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
 app.use("/api/explore", exploreRoutes);
-app.get('/',(req, res) => {
-    res.status(200).json({ message: 'Welcome'});
-})
 
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 

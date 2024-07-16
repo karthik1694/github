@@ -26,7 +26,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Here we can remove the cors, it's not necessary in production because the frontend and backend are on the same domain. I forgot to mention that in the video, sorry about that.🙄
-// app.use(cors());
+app.use(cors());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/users", userRoutes);
@@ -37,9 +37,9 @@ app.get('/',(req, res) => {
 
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-// app.get("*", (req, res) => {
-// 	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-// });
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
 
 app.listen(PORT, () => {
 	console.log(`Server started on http://localhost:${PORT}`);

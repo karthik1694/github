@@ -31,6 +31,7 @@ app.use("/api/users", userRoutes);
 app.use("/api/explore", exploreRoutes);
 
 const staticPath = path.join(__dirname, "frontend", "dist");
+console.log(staticPath);
 app.use(express.static(staticPath));
 app.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));

@@ -1,5 +1,7 @@
 import User from "../models/user.model.js"
-
+import express from "express";
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 export const getUserProfileAndRepos = async (req, res) =>{
     const { username } = req.params;
     try{

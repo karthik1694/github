@@ -4,7 +4,7 @@ import passport from "passport";
 import session from "express-session";
 import path from "path";
 
-import "./passport/github.auth.js";
+import "../backend/passport/github.auth.js";
 
 import userRoutes from "../backend/routes/auth.route.js";
 import exploreRoutes from "../backend/routes/explore.route.js";

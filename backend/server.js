@@ -6,9 +6,9 @@ import path from "path";
 
 import "./passport/github.auth.js";
 
-import userRoutes from "./routes/auth.route.js";
-import exploreRoutes from "./routes/explore.route.js";
-import authRoutes from "./routes/auth.route.js";
+import userRoutes from "../backend/routes/auth.route.js";
+import exploreRoutes from "../backend/routes/explore.route.js";
+import authRoutes from "../backend/routes/auth.route.js";
 
 import connectMongoDB from "./db/connectMongoDB.js";
 

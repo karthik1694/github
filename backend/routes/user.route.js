@@ -1,6 +1,6 @@
 import express from "express";
 import { getUserProfileAndRepos } from "../controllers/user.controller.js";
-import {ensureAuthenticated} from "../middleware/ensureAuthenticated.js";
+import { ensureAuthenticated } from "../middleware/authentication.middleware.js";
 import { likeProfile } from "../controllers/user.controller.js";
 import { getLikes } from "../controllers/user.controller.js";
 const router = express.Router();

@@ -1,7 +1,7 @@
 import passport from 'passport';
 import dotenv from 'dotenv';
 import { Strategy as GitHubStrategy } from 'passport-github2';
-import User from "../backend/models/user.model.js";
+import User from "../backend/models/user.model.js"
 dotenv.config();
 passport.serializeUser(function(user, done) {
     done(null, user);
